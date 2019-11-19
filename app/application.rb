@@ -25,9 +25,9 @@ class Application
           end
         end
     elsif req.path.match(/add/)
-      item = req.params["a"]
-      if @@items.include?(item)
-        @@cart << item
+      add_item = req.params["item"]
+      if @@items.include?(add_item)
+        @@cart << add_item
         # @@items.delete_at(@@items.index(item))
         resp.write "added #{item}\n"
       else
