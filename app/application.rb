@@ -41,7 +41,7 @@ class Application
 
   def handle_add(item)
     if @@items.include?(item)
-      @@cart.push(item)
+      @@cart << item
       @@items.delete_at(@@items.index(item))
       return "added #{item}"
     else
