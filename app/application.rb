@@ -28,7 +28,7 @@ class Application
       item = req.params["a"]
       if @@items.include?(item)
         @@cart << item
-        @@items.delete_at(@@items.index(item))
+        # @@items.delete_at(@@items.index(item))
         resp.write "added #{item}\n"
       else
         resp.write "We don't have that item\n"
