@@ -24,7 +24,6 @@ class Application
         end
     elsif req.path.match(/add/)
       item = req.params["q"]
-      binding.pry
       if @@items.include?(item)
         @@cart << item
         @@items.delete_at(@@items.index(item))
