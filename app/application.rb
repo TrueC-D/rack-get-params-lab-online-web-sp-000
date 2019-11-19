@@ -29,7 +29,7 @@ class Application
       if @@items.include?(add_item)
         @@cart << add_item
         # @@items.delete_at(@@items.index(item))
-        resp.write "added #{item}\n"
+        resp.write "added #{add_item}\n"
       else
         resp.write "We don't have that item\n"
       end
