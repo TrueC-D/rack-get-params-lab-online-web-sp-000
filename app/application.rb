@@ -28,6 +28,7 @@ class Application
         @@cart << item
         @@items.delete_at(@@items.index(item))
         resp.write "added #{item}"
+        binding.pry
       else
         resp.write "We don't have that item"
       end
